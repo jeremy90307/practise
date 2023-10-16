@@ -42,10 +42,7 @@ void printlinkedlist()
         p = p->next;
     }
 }
-void DeletAtBegin()
-{
-    head = head->next;
-}
+
 
 int main(){
     printf("how many numbers?\n");
