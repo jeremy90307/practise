@@ -8,7 +8,7 @@ struct node{
 struct node *head = NULL;
 struct node *current = NULL;
 
-void Insert(int data,int n)
+void Insert(int data,int n)ㄋ
 {
     struct node *temp = (struct node *)malloc(sizeof(struct node));
     temp->data = data;
@@ -17,7 +17,7 @@ void Insert(int data,int n)
     {
         temp->next = head;
         head = temp;
-        return;                      //return沒加會無限循環
+        return;                      //return to main
     }
     struct node *temp2 = head;
     for(int i=0;i<n-2;i++)
