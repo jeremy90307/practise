@@ -10,28 +10,28 @@ struct node *current = NULL;
 
 void InsertAtBegin(int data)
 {
-    struct node *lk = (struct node *)malloc(sizeof(struct node));
-    lk->data = data;
-    lk->next = head; //指向就的node
-    head = lk;       //指向新的node
+    struct node *temp = (struct node *)malloc(sizeof(struct node));
+    temp->data = data;
+    temp->next = head; //指向就的node lk->next = NULL;
+    head = temp;       //指向新的node
 }
 void InsertAtEnd(int data)
 {
-    struct node *lk = (struct node *)malloc(sizeof(struct node));
-    lk->data = data;
+    struct node *temp = (struct node *)malloc(sizeof(struct node));
+    temp->data = data;
 
     struct node *linkedlist = head;
     while(linkedlist->next != NULL)
         linkedlist = linkedlist->next;
 
-    linkedlist->next = lk; 
+    linkedlist->next = temp; 
 }
 void InsertAtMiddle(struct node *list,int data)
 {
-    struct node *lk = (struct node *)malloc(sizeof(struct node));
-    lk->data = data;
-    lk->next = list->next;
-    list->next = lk;
+    struct node *temp = (struct node *)malloc(sizeof(struct node));
+    temp->data = data;
+    temp->next = list->next;
+    list->next = temp;
 }
 void printlinkedlist()
 {
@@ -48,9 +48,17 @@ void DeletAtBegin()
 }
 
 int main(){
-    InsertAtBegin(21);
-    InsertAtEnd(33);
-    InsertAtMiddle(head->next,66);
+    printf("how many numbers?\n");
+    int x,n;
+    scanf("%d",&n);
+    for(int i=0;i<n;i++)
+    {
+        printf("enter the number \n");
+        scanf("%d",&x);
+        InsertAtBegin(x);
+    }
+    //InsertAtEnd(33);
+    //InsertAtMiddle(head->next,66);
     printlinkedlist();
     
     return 0;
