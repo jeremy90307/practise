@@ -46,10 +46,7 @@ void DeletAtBegin()
 {
     head = head->next;
 }
-void DeleteAtEnd()
-{
-    struct node
-}
+
 int main(){
     InsertAtBegin(21);
     InsertAtEnd(33);
