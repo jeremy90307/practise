@@ -36,9 +36,25 @@ void InsertAtMiddle(struct node *list,int data)
 void printlinkedlist()
 {
     struct node *p = head;
-    while(p->next != NULL)
+    while(p != NULL)
     {
-        printf("%d",p->data);
-        p = p->data;
+        printf(" %d ",p->data);
+        p = p->next;
     }
+}
+void DeletAtBegin()
+{
+    head = head->next;
+}
+void DeleteAtEnd()
+{
+    struct node
+}
+int main(){
+    InsertAtBegin(21);
+    InsertAtEnd(33);
+    InsertAtMiddle(head->next,66);
+    printlinkedlist();
+    
+    return 0;
 }
